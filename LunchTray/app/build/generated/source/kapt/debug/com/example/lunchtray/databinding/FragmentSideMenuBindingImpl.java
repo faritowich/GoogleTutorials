@@ -5,7 +5,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import android.view.View;
 @SuppressWarnings("unchecked")
-public class FragmentSideMenuBindingImpl extends FragmentSideMenuBinding implements com.example.lunchtray.generated.callback.OnClickListener.Listener {
+public class FragmentSideMenuBindingImpl extends FragmentSideMenuBinding  {
 
     @Nullable
     private static final androidx.databinding.ViewDataBinding.IncludedLayouts sIncludes;
@@ -14,17 +14,16 @@ public class FragmentSideMenuBindingImpl extends FragmentSideMenuBinding impleme
     static {
         sIncludes = null;
         sViewsWithIds = new android.util.SparseIntArray();
-        sViewsWithIds.put(R.id.side_options, 14);
-        sViewsWithIds.put(R.id.divider, 15);
-        sViewsWithIds.put(R.id.subtotal, 16);
-        sViewsWithIds.put(R.id.cancel_button, 17);
+        sViewsWithIds.put(R.id.side_options, 13);
+        sViewsWithIds.put(R.id.divider, 14);
+        sViewsWithIds.put(R.id.subtotal, 15);
+        sViewsWithIds.put(R.id.cancel_button, 16);
+        sViewsWithIds.put(R.id.next_button, 17);
     }
     // views
     @NonNull
     private final android.widget.ScrollView mboundView0;
     // variables
-    @Nullable
-    private final android.view.View.OnClickListener mCallback2;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -34,9 +33,9 @@ public class FragmentSideMenuBindingImpl extends FragmentSideMenuBinding impleme
     }
     private FragmentSideMenuBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 0
+            , (android.widget.Button) bindings[16]
+            , (android.view.View) bindings[14]
             , (android.widget.Button) bindings[17]
-            , (android.view.View) bindings[15]
-            , (android.widget.Button) bindings[13]
             , (android.widget.TextView) bindings[8]
             , (android.widget.TextView) bindings[9]
             , (android.widget.RadioButton) bindings[7]
@@ -46,15 +45,14 @@ public class FragmentSideMenuBindingImpl extends FragmentSideMenuBinding impleme
             , (android.widget.RadioButton) bindings[1]
             , (android.widget.TextView) bindings[2]
             , (android.widget.TextView) bindings[3]
-            , (android.widget.RadioGroup) bindings[14]
+            , (android.widget.RadioGroup) bindings[13]
             , (android.widget.RadioButton) bindings[4]
             , (android.widget.TextView) bindings[5]
             , (android.widget.TextView) bindings[6]
-            , (android.widget.TextView) bindings[16]
+            , (android.widget.TextView) bindings[15]
             );
         this.mboundView0 = (android.widget.ScrollView) bindings[0];
         this.mboundView0.setTag(null);
-        this.nextButton.setTag(null);
         this.potatoDescription.setTag(null);
         this.potatoPrice.setTag(null);
         this.potatoes.setTag(null);
@@ -69,7 +67,6 @@ public class FragmentSideMenuBindingImpl extends FragmentSideMenuBinding impleme
         this.soupPrice.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback2 = new com.example.lunchtray.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -108,11 +105,6 @@ public class FragmentSideMenuBindingImpl extends FragmentSideMenuBinding impleme
 
     public void setSideFragment(@Nullable com.example.lunchtray.ui.order.SideMenuFragment SideFragment) {
         this.mSideFragment = SideFragment;
-        synchronized(this) {
-            mDirtyFlags |= 0x1L;
-        }
-        notifyPropertyChanged(BR.sideFragment);
-        super.requestRebind();
     }
     public void setViewModel(@Nullable com.example.lunchtray.model.OrderViewModel ViewModel) {
         this.mViewModel = ViewModel;
@@ -139,7 +131,6 @@ public class FragmentSideMenuBindingImpl extends FragmentSideMenuBinding impleme
         }
         java.lang.String viewModelMenuItemsSoupName = null;
         com.example.lunchtray.model.MenuItem viewModelMenuItemsSalad = null;
-        com.example.lunchtray.ui.order.SideMenuFragment sideFragment = mSideFragment;
         java.util.Map<java.lang.String,com.example.lunchtray.model.MenuItem> viewModelMenuItems = null;
         com.example.lunchtray.model.MenuItem viewModelMenuItemsSoup = null;
         java.lang.String viewModelMenuItemsRiceDescription = null;
@@ -213,11 +204,6 @@ public class FragmentSideMenuBindingImpl extends FragmentSideMenuBinding impleme
                 }
         }
         // batch finished
-        if ((dirtyFlags & 0x4L) != 0) {
-            // api target 1
-
-            this.nextButton.setOnClickListener(mCallback2);
-        }
         if ((dirtyFlags & 0x6L) != 0) {
             // api target 1
 
@@ -237,22 +223,6 @@ public class FragmentSideMenuBindingImpl extends FragmentSideMenuBinding impleme
     }
     // Listener Stub Implementations
     // callback impls
-    public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
-        // localize variables for thread safety
-        // sideFragment != null
-        boolean sideFragmentJavaLangObjectNull = false;
-        // sideFragment
-        com.example.lunchtray.ui.order.SideMenuFragment sideFragment = mSideFragment;
-
-
-
-        sideFragmentJavaLangObjectNull = (sideFragment) != (null);
-        if (sideFragmentJavaLangObjectNull) {
-
-
-            sideFragment.goToNextScreen();
-        }
-    }
     // dirty flag
     private  long mDirtyFlags = 0xffffffffffffffffL;
     /* flag mapping

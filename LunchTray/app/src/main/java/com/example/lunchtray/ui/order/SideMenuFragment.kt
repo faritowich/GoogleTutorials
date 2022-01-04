@@ -46,6 +46,10 @@ class SideMenuFragment : Fragment() {
             lifecycleOwner = viewLifecycleOwner
             viewModel = sharedViewModel
             // TODO: initialize the SideMenuFragment variables
+
+            nextButton.setOnClickListener {
+                goToNextScreen()
+            }
         }
     }
 

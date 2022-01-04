@@ -47,6 +47,10 @@ class AccompanimentMenuFragment : Fragment() {
             lifecycleOwner = viewLifecycleOwner
             viewModel = sharedViewModel
             // TODO: initialize the AccompanimentMenuFragment variables
+
+            nextButton.setOnClickListener {
+                goToNextScreen()
+            }
         }
     }
 
