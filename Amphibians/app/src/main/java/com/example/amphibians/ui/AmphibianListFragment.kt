@@ -1,5 +1,6 @@
 package com.example.amphibians.ui
 
+import android.app.Fragment
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -21,7 +22,7 @@ class AmphibianListFragment : Fragment() {
     ): View? {
         val binding = FragmentAmphibianListBinding.inflate(inflater)
 
-        // TODO: call the view model method that calls the amphibians api
+        // call the view model method that calls the amphibians api
         binding.lifecycleOwner = this
         binding.viewModel = viewModel
         binding.recyclerView.adapter = AmphibianListAdapter(AmphibianListener { amphibian ->
