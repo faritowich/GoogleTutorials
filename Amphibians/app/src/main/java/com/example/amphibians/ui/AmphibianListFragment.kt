@@ -1,6 +1,5 @@
 package com.example.amphibians.ui
 
-import android.app.Fragment
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -12,7 +11,7 @@ import com.example.amphibians.R
 import com.example.amphibians.databinding.FragmentAmphibianListBinding
 
 
-class AmphibianListFragment : Fragment() {
+class AmphibianListFragment : androidx.fragment.app.Fragment() {
 
     private val viewModel: AmphibianViewModel by activityViewModels()
 

@@ -34,7 +34,6 @@ class AmphibianListAdapter(val clickListener: AmphibianListener) :
         override fun areContentsTheSame(oldItem: Amphibian, newItem: Amphibian): Boolean {
             return oldItem.type == newItem.type && oldItem.description == newItem.description
         }
-
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): AmphibianViewHolder {
